@@ -1,5 +1,6 @@
 "use client";
 
+import { JazzInspector } from "jazz-inspector";
 import { JazzProvider } from "jazz-react";
 import { ChatAccount } from "./schema";
 
@@ -15,10 +16,11 @@ function JazzAndAuth({ children }: { children: React.ReactNode }) {
   return (
     <>
       <JazzProvider
-        sync={{ peer: "wss://cloud.jazz.tools/?key=me@tobi.sh-ai-chat" }}
+        sync={{ peer: "wss://cloud.jazz.tools/?key=aliosman@hellospace.world" }}
         AccountSchema={ChatAccount}
       >
         {children}
+        <JazzInspector />
       </JazzProvider>
     </>
   );
